@@ -92,8 +92,8 @@ h3 {
   font-size: 1.625rem;
 }
 
-h4, h5 {
-  font-size: 1.125rem;
+h6 {
+  font-size: 0.9375rem;
 }
 
 body {
@@ -152,24 +152,48 @@ button__danger:hover, .button__danger:hover {
   box-shadow: 0 0px 0.9375rem #c85c54;
 }
 
+.flair {
+  font-size: 0.875rem;
+  padding: 0.125rem 0.75rem;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 0.3125rem;
+  background-color: #76bedb;
+}
+
+.wrapper {
+  padding: 2.25rem 0.75rem 1.625rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #eeedee;
+  border-radius: 0.9375rem;
+  filter: drop-shadow(0 0 0.125rem #0f0f0faa);
+}
+
+.card {
+  padding: 1.625rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #eeedee;
+  border-radius: 0.9375rem;
+  filter: drop-shadow(0 0 0.125rem #0f0f0fcc);
+}
+
 /* >> HELPERS << */
 /* Flexbox */
 .flex {
   display: flex;
 }
-.flex--jc-sb {
+.flex--justify-between {
   justify-content: space-between;
 }
-.flex--jc-c {
+.flex--justify-center {
   justify-content: center;
 }
-.flex--ai-c {
+.flex--alignitems-center {
   align-items: center;
 }
-.flex--jc-sb {
-  justify-content: space-between;
-}
-.flex--jc-sa {
+.flex--justify-around {
   justify-content: space-around;
 }
 
@@ -178,49 +202,49 @@ button__danger:hover, .button__danger:hover {
   max-width: 100rem;
   margin: 0 auto;
 }
-.container--pall {
+.container--padding-all {
   padding: 4.375rem 1.5rem;
 }
 @media (min-width: 75em) {
-  .container--pall {
+  .container--padding-all {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
 }
-.container--py {
+.container--paddigng-vertical {
   padding-top: 4.375rem;
   padding-bottom: 4.375rem;
 }
 @media (min-width: 75em) {
-  .container--py {
+  .container--paddigng-vertical {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
 }
-.container--px {
+.container--padding-horizontal {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
 }
-.container--pt {
+.container--padding-top {
   padding-top: 4.375rem;
 }
 @media (min-width: 75em) {
-  .container--pt {
+  .container--padding-top {
     padding-top: 6rem;
   }
 }
-.container--pr {
+.container--padding-right {
   padding-right: 1.5rem;
 }
-.container--pb {
+.container--padding-bottom {
   padding-bottom: 4.375rem;
 }
 @media (min-width: 75em) {
-  .container--pb {
+  .container--padding-bottom {
     padding-bottom: 6rem;
   }
 }
-.container--pl {
+.container--padding-left {
   padding-left: 1.5rem;
 }
 
@@ -235,15 +259,6 @@ button__danger:hover, .button__danger:hover {
   .hide-for-desktop {
     display: none;
   }
-}
-
-.issue-form__wrapper {
-  padding: 1.625rem 0.75rem;
-  display: flex;
-  flex-direction: column;
-  background-color: #eeedee;
-  border-radius: 0.9375rem;
-  filter: drop-shadow(0 0 1rem #0f0f0fdd);
 }
 
 /*# sourceMappingURL=styles.css.map */

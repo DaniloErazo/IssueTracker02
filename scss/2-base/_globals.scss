@@ -39,7 +39,7 @@ h3 {
     font-size: h.$font-small;
 }
 
-h4, h5 {
+h6 {
     font-size: h.$font-xsmall;
 }
 
@@ -104,6 +104,33 @@ button, .button {
     }
 }
 
+.flair {
+    font-size: h.$font-usmall;
+    padding: 0.125rem 0.75rem;
+    color: h.$white;
+    font-weight: bold;
+    border-radius: 0.3125rem;
+    background-color: h.$confirmBlue;
+}
+
+.wrapper {
+    padding: 2.25rem 0.75rem 1.625rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    background-color: h.$veryLightGray;
+    border-radius: 0.9375rem;
+    filter: drop-shadow(0 0 0.125rem #0f0f0faa);
+}
+
+.card {
+    padding: 1.625rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    background-color: h.$veryLightGray;
+    border-radius: 0.9375rem;
+    filter: drop-shadow(0 0 0.125rem #0f0f0fcc);
+}
+
 /* >> HELPERS << */
 
 /* Flexbox */
@@ -112,23 +139,19 @@ button, .button {
 
     display: flex;
 
-    &--jc-sb {
+    &--justify-between {
         justify-content: space-between;
     }
 
-    &--jc-c {
+    &--justify-center {
         justify-content: center;
     }
 
-    &--ai-c {
+    &--alignitems-center {
         align-items: center;
     }
 
-    &--jc-sb {
-        justify-content: space-between;
-    }
-
-    &--jc-sa {
+    &--justify-around {
         justify-content: space-around;
     }
 
@@ -142,7 +165,7 @@ button, .button {
     margin: 0 auto;
     
     
-    &--pall{
+    &--padding-all{
         padding: 4.375rem 1.5rem;
         
         @include h.breakpoint-up(large) {
@@ -151,7 +174,7 @@ button, .button {
         }
     }
     
-    &--py{
+    &--paddigng-vertical {
         padding-top: 4.375rem;
         padding-bottom: 4.375rem;
         
@@ -160,28 +183,28 @@ button, .button {
             padding-bottom: 6rem;
         }
     }
-    &--px{
+    &--padding-horizontal {
         padding-right: 1.5rem;
         padding-left: 1.5rem;
     }
-    &--pt{
+    &--padding-top {
         padding-top: 4.375rem;
 
         @include h.breakpoint-up(large) {
             padding-top: 6rem;
         }
     }
-    &--pr{
+    &--padding-right {
         padding-right: 1.5rem;
     }
-    &--pb{
+    &--padding-bottom {
         padding-bottom: 4.375rem;
 
         @include h.breakpoint-up(large) {
             padding-bottom: 6rem;
         }
     }
-    &--pl{
+    &--padding-left {
         padding-left: 1.5rem;
     }
 }
