@@ -14,8 +14,17 @@ html {
     box-sizing: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, label, .label {
     color: h.$darkGray;
+    text-align: left;
+}
+
+label, .label {
+    font-weight: bold;
 }
 
 h1 {
@@ -40,6 +49,62 @@ body {
     line-height: 1.5;
     color: h.$lightGray;
 }
+
+input {
+    padding: 0.75rem;
+    border: 0.03125rem solid #00000077;
+    border-radius: 0.3125rem;
+    background-color: h.$white;
+    filter: drop-shadow(0 0 0.3125rem #00000022);
+}
+
+button, .button {
+    padding: 0.75rem;
+    min-width: 4.5rem;
+    color: h.$white;
+    background-color: h.$mainBlue;
+    border: 0.015625rem solid h.$lightGray;
+    border-radius: 0.3125rem;
+    transition: all 350ms ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        border: 0.015625rem solid transparent;
+        box-shadow: 0 0px 0.9375rem h.$mainBlue;
+    }
+    
+    &__warn {
+        padding: 0.75rem;
+        min-width: 4.5rem;
+        color: h.$white;
+        background-color: h.$warnYellow;
+        border: 0.015625rem solid h.$lightGray;
+        border-radius: 0.3125rem;
+        transition: all 350ms ease-in-out;
+        
+        &:hover {
+            border: 0.015625rem solid transparent;
+            box-shadow: 0 0px 0.9375rem h.$warnYellow;
+        }
+    }
+    
+    &__danger {
+        padding: 0.75rem;
+        min-width: 4.5rem;
+        color: h.$white;
+        background-color: h.$dangerRed;
+        border: 0.015625rem solid h.$lightGray;
+        border-radius: 0.3125rem;
+        transition: all 350ms ease-in-out;
+
+        &:hover {
+            border: 0.015625rem solid transparent;
+            box-shadow: 0 0px 0.9375rem h.$dangerRed;
+        }
+    }
+}
+
+/* >> HELPERS << */
 
 /* Flexbox */
 

@@ -67,8 +67,17 @@ html {
   box-sizing: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, label, .label {
   color: #333333;
+  text-align: left;
+}
+
+label, .label {
+  font-weight: bold;
 }
 
 h1 {
@@ -94,6 +103,56 @@ body {
   color: #9a9a9b;
 }
 
+input {
+  padding: 0.75rem;
+  border: 0.03125rem solid #00000077;
+  border-radius: 0.3125rem;
+  background-color: #ffffff;
+  filter: drop-shadow(0 0 0.3125rem #00000022);
+}
+
+button, .button {
+  padding: 0.75rem;
+  min-width: 4.5rem;
+  color: #ffffff;
+  background-color: #4677b3;
+  border: 0.015625rem solid #9a9a9b;
+  border-radius: 0.3125rem;
+  transition: all 350ms ease-in-out;
+}
+button:hover, .button:hover {
+  cursor: pointer;
+  border: 0.015625rem solid transparent;
+  box-shadow: 0 0px 0.9375rem #4677b3;
+}
+button__warn, .button__warn {
+  padding: 0.75rem;
+  min-width: 4.5rem;
+  color: #ffffff;
+  background-color: #e6b05f;
+  border: 0.015625rem solid #9a9a9b;
+  border-radius: 0.3125rem;
+  transition: all 350ms ease-in-out;
+}
+button__warn:hover, .button__warn:hover {
+  border: 0.015625rem solid transparent;
+  box-shadow: 0 0px 0.9375rem #e6b05f;
+}
+button__danger, .button__danger {
+  padding: 0.75rem;
+  min-width: 4.5rem;
+  color: #ffffff;
+  background-color: #c85c54;
+  border: 0.015625rem solid #9a9a9b;
+  border-radius: 0.3125rem;
+  transition: all 350ms ease-in-out;
+}
+button__danger:hover, .button__danger:hover {
+  border: 0.015625rem solid transparent;
+  box-shadow: 0 0px 0.9375rem #c85c54;
+}
+
+/* >> HELPERS << */
 /* Flexbox */
 .flex {
   display: flex;
