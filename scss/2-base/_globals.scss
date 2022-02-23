@@ -131,6 +131,71 @@ button, .button {
     filter: drop-shadow(0 0 0.125rem #0f0f0fcc);
 }
 
+.icon {
+
+    //default
+
+    width: 1rem;
+    height: 1rem;
+    background-position: center center;
+    background-size: cover;
+    
+    &__small {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    &__medium {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    &__large {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &__clock {
+        background: url("./../../node_modules/bootstrap-icons/icons/clock.svg");
+        transition: background 200ms ease-in-out;
+    }
+
+    &__clock:hover {
+        cursor: pointer;
+        background: url("./../../node_modules/bootstrap-icons/icons/clock-fill.svg");
+    }
+
+    &__person {
+        background: url("./../../node_modules/bootstrap-icons/icons/person.svg");
+        transition: background 200ms ease-in-out;
+    }
+
+    &__person:hover {
+        cursor: pointer;
+        background: url("./../../node_modules/bootstrap-icons/icons/person-fill.svg");
+    }
+
+    &__x {
+        background: url("./../../node_modules/bootstrap-icons/icons/x-circle.svg");
+        transition: background 200ms ease-in-out;
+    }
+
+    &__x:hover {
+        cursor: pointer;
+        background: url("./../../node_modules/bootstrap-icons/icons/x-circle-fill.svg");
+    }
+
+    &__trash {
+        background: url("./../../node_modules/bootstrap-icons/icons/trash.svg");
+        transition: background 200ms ease-in-out;
+    }
+
+    &__trash:hover {
+        cursor: pointer;
+        background: url("./../../node_modules/bootstrap-icons/icons/trash-fill.svg");
+    }
+}
+
 /* >> HELPERS << */
 
 /* Flexbox */
