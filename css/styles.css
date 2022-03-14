@@ -1,3 +1,315 @@
+/* Colors */
+/* Font Sizes */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, label, .label {
+  color: #333333;
+  text-align: left;
+}
+
+label, .label {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.375rem;
+}
+
+h3 {
+  font-size: 1.625rem;
+}
+
+h6 {
+  font-size: 0.9375rem;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #9a9a9b;
+}
+
+input {
+  padding: 0.75rem;
+  border: 0.03125rem solid #00000077;
+  border-radius: 0.3125rem;
+  background-color: #ffffff;
+  filter: drop-shadow(0 0 0.3125rem #00000022);
+}
+
+button, .button {
+  padding: 0.75rem;
+  min-width: 4.5rem;
+  color: #ffffff;
+  background-color: #4677b3;
+  border: 0.015625rem solid #9a9a9b;
+  border-radius: 0.3125rem;
+  transition: all 350ms ease-in-out;
+}
+button:hover, .button:hover {
+  cursor: pointer;
+  border: 0.015625rem solid transparent;
+  box-shadow: 0 0px 0.9375rem #4677b3;
+}
+button__warn, .button__warn {
+  padding: 0.75rem;
+  min-width: 4.5rem;
+  color: #ffffff;
+  background-color: #e6b05f;
+  border: 0.015625rem solid #9a9a9b;
+  border-radius: 0.3125rem;
+  transition: all 350ms ease-in-out;
+}
+button__warn:hover, .button__warn:hover {
+  border: 0.015625rem solid transparent;
+  box-shadow: 0 0px 0.9375rem #e6b05f;
+}
+button__danger, .button__danger {
+  padding: 0.75rem;
+  min-width: 4.5rem;
+  color: #ffffff;
+  background-color: #c85c54;
+  border: 0.015625rem solid #9a9a9b;
+  border-radius: 0.3125rem;
+  transition: all 350ms ease-in-out;
+}
+button__danger:hover, .button__danger:hover {
+  border: 0.015625rem solid transparent;
+  box-shadow: 0 0px 0.9375rem #c85c54;
+}
+
+.flair {
+  font-size: 0.875rem;
+  padding: 0.125rem 0.75rem;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 0.3125rem;
+  background-color: #76bedb;
+}
+
+.wrapper {
+  padding: 2.25rem 0.75rem 1.625rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #eeedee;
+  border-radius: 0.9375rem;
+  filter: drop-shadow(0 0 0.125rem #0f0f0faa);
+}
+
+.card {
+  padding: 1.625rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #eeedee;
+  border-radius: 0.9375rem;
+  filter: drop-shadow(0 0 0.125rem #0f0f0fcc);
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  background-position: center center;
+  background-size: cover;
+}
+.icon__small {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.icon__medium {
+  width: 2rem;
+  height: 2rem;
+}
+.icon__large {
+  width: 4rem;
+  height: 4rem;
+}
+.icon__clock {
+  background: url("./../../node_modules/bootstrap-icons/icons/clock.svg");
+  transition: background 200ms ease-in-out;
+}
+.icon__clock:hover {
+  cursor: pointer;
+  background: url("./../../node_modules/bootstrap-icons/icons/clock-fill.svg");
+}
+.icon__person {
+  background: url("./../../node_modules/bootstrap-icons/icons/person.svg");
+  transition: background 200ms ease-in-out;
+}
+.icon__person:hover {
+  cursor: pointer;
+  background: url("./../../node_modules/bootstrap-icons/icons/person-fill.svg");
+}
+.icon__x {
+  background: url("./../../node_modules/bootstrap-icons/icons/x-circle.svg");
+  transition: background 200ms ease-in-out;
+}
+.icon__x:hover {
+  cursor: pointer;
+  background: url("./../../node_modules/bootstrap-icons/icons/x-circle-fill.svg");
+}
+.icon__trash {
+  background: url("./../../node_modules/bootstrap-icons/icons/trash.svg");
+  transition: background 200ms ease-in-out;
+}
+.icon__trash:hover {
+  cursor: pointer;
+  background: url("./../../node_modules/bootstrap-icons/icons/trash-fill.svg");
+}
+
+/* >> HELPERS << */
+/* Flexbox */
+.flex {
+  display: flex;
+}
+.flex--justify-between {
+  justify-content: space-between;
+}
+.flex--justify-center {
+  justify-content: center;
+}
+.flex--alignitems-center {
+  align-items: center;
+}
+.flex--justify-around {
+  justify-content: space-around;
+}
+
+/* Spacing */
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.container--padding-all {
+  padding: 4.375rem 1.5rem;
+}
+@media (min-width: 75em) {
+  .container--padding-all {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.container--paddigng-vertical {
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+@media (min-width: 75em) {
+  .container--paddigng-vertical {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.container--padding-horizontal {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.container--padding-top {
+  padding-top: 4.375rem;
+}
+@media (min-width: 75em) {
+  .container--padding-top {
+    padding-top: 6rem;
+  }
+}
+.container--padding-right {
+  padding-right: 1.5rem;
+}
+.container--padding-bottom {
+  padding-bottom: 4.375rem;
+}
+@media (min-width: 75em) {
+  .container--padding-bottom {
+    padding-bottom: 6rem;
+  }
+}
+.container--padding-left {
+  padding-left: 1.5rem;
+}
+
+/* Visibility */
+@media (max-width: 74.96875em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 75em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

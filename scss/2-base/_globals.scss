@@ -1,0 +1,289 @@
+@use "../1-helpers" as h;
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, label, .label {
+    color: h.$darkGray;
+    text-align: left;
+}
+
+label, .label {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: h.$font-large;
+}
+
+h2 {
+    font-size: h.$font-med;
+}
+
+h3 {
+    font-size: h.$font-small;
+}
+
+h6 {
+    font-size: h.$font-xsmall;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: h.$lightGray;
+}
+
+input {
+    padding: 0.75rem;
+    border: 0.03125rem solid #00000077;
+    border-radius: 0.3125rem;
+    background-color: h.$white;
+    filter: drop-shadow(0 0 0.3125rem #00000022);
+}
+
+button, .button {
+    padding: 0.75rem;
+    min-width: 4.5rem;
+    color: h.$white;
+    background-color: h.$mainBlue;
+    border: 0.015625rem solid h.$lightGray;
+    border-radius: 0.3125rem;
+    transition: all 350ms ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        border: 0.015625rem solid transparent;
+        box-shadow: 0 0px 0.9375rem h.$mainBlue;
+    }
+    
+    &__warn {
+        padding: 0.75rem;
+        min-width: 4.5rem;
+        color: h.$white;
+        background-color: h.$warnYellow;
+        border: 0.015625rem solid h.$lightGray;
+        border-radius: 0.3125rem;
+        transition: all 350ms ease-in-out;
+        
+        &:hover {
+            border: 0.015625rem solid transparent;
+            box-shadow: 0 0px 0.9375rem h.$warnYellow;
+        }
+    }
+    
+    &__danger {
+        padding: 0.75rem;
+        min-width: 4.5rem;
+        color: h.$white;
+        background-color: h.$dangerRed;
+        border: 0.015625rem solid h.$lightGray;
+        border-radius: 0.3125rem;
+        transition: all 350ms ease-in-out;
+
+        &:hover {
+            border: 0.015625rem solid transparent;
+            box-shadow: 0 0px 0.9375rem h.$dangerRed;
+        }
+    }
+}
+
+.flair {
+    font-size: h.$font-usmall;
+    padding: 0.125rem 0.75rem;
+    color: h.$white;
+    font-weight: bold;
+    border-radius: 0.3125rem;
+    background-color: h.$confirmBlue;
+}
+
+.wrapper {
+    padding: 2.25rem 0.75rem 1.625rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    background-color: h.$veryLightGray;
+    border-radius: 0.9375rem;
+    filter: drop-shadow(0 0 0.125rem #0f0f0faa);
+}
+
+.card {
+    padding: 1.625rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    background-color: h.$veryLightGray;
+    border-radius: 0.9375rem;
+    filter: drop-shadow(0 0 0.125rem #0f0f0fcc);
+}
+
+.icon {
+
+    //default
+
+    width: 1rem;
+    height: 1rem;
+    background-position: center center;
+    background-size: cover;
+    
+    &__small {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    &__medium {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    &__large {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &__clock {
+        background: url("./../../node_modules/bootstrap-icons/icons/clock.svg");
+        transition: background 200ms ease-in-out;
+    }
+
+    &__clock:hover {
+        cursor: pointer;
+        background: url("./../../node_modules/bootstrap-icons/icons/clock-fill.svg");
+    }
+
+    &__person {
+        background: url("./../../node_modules/bootstrap-icons/icons/person.svg");
+        transition: background 200ms ease-in-out;
+    }
+
+    &__person:hover {
+        cursor: pointer;
+        background: url("./../../node_modules/bootstrap-icons/icons/person-fill.svg");
+    }
+
+    &__x {
+        background: url("./../../node_modules/bootstrap-icons/icons/x-circle.svg");
+        transition: background 200ms ease-in-out;
+    }
+
+    &__x:hover {
+        cursor: pointer;
+        background: url("./../../node_modules/bootstrap-icons/icons/x-circle-fill.svg");
+    }
+
+    &__trash {
+        background: url("./../../node_modules/bootstrap-icons/icons/trash.svg");
+        transition: background 200ms ease-in-out;
+    }
+
+    &__trash:hover {
+        cursor: pointer;
+        background: url("./../../node_modules/bootstrap-icons/icons/trash-fill.svg");
+    }
+}
+
+/* >> HELPERS << */
+
+/* Flexbox */
+
+.flex {
+
+    display: flex;
+
+    &--justify-between {
+        justify-content: space-between;
+    }
+
+    &--justify-center {
+        justify-content: center;
+    }
+
+    &--alignitems-center {
+        align-items: center;
+    }
+
+    &--justify-around {
+        justify-content: space-around;
+    }
+
+}
+
+/* Spacing */
+
+.container {
+
+    max-width: 100rem;
+    margin: 0 auto;
+    
+    
+    &--padding-all{
+        padding: 4.375rem 1.5rem;
+        
+        @include h.breakpoint-up(large) {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+    }
+    
+    &--paddigng-vertical {
+        padding-top: 4.375rem;
+        padding-bottom: 4.375rem;
+        
+        @include h.breakpoint-up(large) {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+    }
+    &--padding-horizontal {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    &--padding-top {
+        padding-top: 4.375rem;
+
+        @include h.breakpoint-up(large) {
+            padding-top: 6rem;
+        }
+    }
+    &--padding-right {
+        padding-right: 1.5rem;
+    }
+    &--padding-bottom {
+        padding-bottom: 4.375rem;
+
+        @include h.breakpoint-up(large) {
+            padding-bottom: 6rem;
+        }
+    }
+    &--padding-left {
+        padding-left: 1.5rem;
+    }
+}
+
+/* Visibility */
+
+.hide-for-mobile {
+    @include h.breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include h.breakpoint-up(large) {
+        display: none;
+    }
+}
